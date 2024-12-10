@@ -1,4 +1,4 @@
-def part_one():
+def day_one():
     ## Challenge 1
     with (open(file="numbers.txt", mode="r", encoding="utf-8") as numbers):
         list_of_numbers = numbers.read().split()
@@ -20,31 +20,19 @@ def part_one():
 
         assert len(list_of_diffs) == len(list_of_numbers) / 2
         challenge_1_total = sum(list_of_diffs)
-        #print(challenge_1_total)
+        print(challenge_1_total)
 
         ### Challenge 2 (WIP)
-        total = []
-        occurences = []
-        keys = {}
         for left_number in left_side:
             for right_number in right_side:
                 if left_number == right_number:
-                    keys[left_number] = occurences.append(right_number)}
+                    ### Need to figure out what to do here
 
-                relative = left_number * int(len(occurences))
-        print(occurences)
-                #print(relative)
-                #total.append(relative)
 
-        #print(sum(total))
-                #similarity_score =left_number * occurences
-                #print(occurences)
-                #print(similarity_score)
-                #if left_number == right_number:
 
 
 
 
 
 if __name__ == "__main__":
-    part_one()
+    day_one()_one()

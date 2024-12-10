@@ -22,17 +22,24 @@ def day_one():
         challenge_1_total = sum(list_of_diffs)
         print(challenge_1_total)
 
-        ### Challenge 2 (WIP)
-        for left_number in left_side:
-            for right_number in right_side:
-                if left_number == right_number:
-                    ### Need to figure out what to do here
+        ## Challenge 2 (WIP)
+        ## Claude helped me with this one :facepalm:
+        right_counts = {}
+        for num in right_side:
+            num = int(num)
+            right_counts[num] = right_counts.get(num, 0) + 1
 
 
+        challenge_2_similarity_score = 0
+        for num in left_side:
+            num = int(num)
 
+            count = right_counts.get(num, 0)
 
+            challenge_2_similarity_score += num * count
 
+        print(challenge_2_similarity_score)
 
 
 if __name__ == "__main__":
-    day_one()_one()
+    day_one()
